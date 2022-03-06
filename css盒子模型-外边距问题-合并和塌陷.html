@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .box1{
+            width: 200px;
+            height: 200px;
+            background-color: red;
+            margin-bottom: 60px;
+        }
+        .box2{
+            width: 200px;
+            height: 200px;
+            background-color: red;
+            margin-top: 50px;
+            margin-bottom: 50px;
+        }
+        /* 垂直布局的块级元素，上下的margin会合并，最终为两者最大值 */
+        .father{
+            height: 400px;
+            width: 400px;
+            background-color: pink;
+            /* padding-top:50px ; */
+            overflow: hidden;
+        }
+        /* 互相嵌套的块级元素，子元素的margin-top会作用在父元素上 */
+        /* 解决方法：给父元素设置border-top或者padding-top，给父元素设置overflow：hidden，转换成行内块元素，设置浮动 */
+        .son{
+            height: 100px;
+            width: 100px;
+            background-color: red;
+            margin-top: 50px;
+            /* display: inline-block; */
+        }
+    </style>
+</head>
+<body>
+    <div class="box1">b1</div>
+    <div class="box2">b2</div>
+    <div class="father">
+        <div class="son"></div>
+    </div>
+</body>
+</html>

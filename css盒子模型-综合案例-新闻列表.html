@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 从外到内：先宽高背景色，放内容，调节内容的位置，控制文字的细节 */
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .news{
+            height: 400px;
+            width: 500px;
+            border: 1px solid #CCC;
+            margin: 50px auto;
+            padding: 42px 30px 0;
+        }
+        .news h1{
+            border-bottom: 1px solid #ccc;
+            padding-bottom: 9px ;
+            line-height: 1;
+        }
+        .news li{
+            list-style: none;
+            border-bottom: 1px dashed #ccc;
+            height: 50px;
+            line-height: 50px;
+            padding-left: 28px;
+        }
+        li a{
+            text-decoration: none;
+            color: #666;
+            font-size: 18px;
+        }
+    </style>
+</head>
+<body>
+    <div class="news">
+        <h1>最新文章/New Articles</h1>
+        <ul>
+            <li><a href="#">字节跳动春招</a></li>
+            <li><a href="#">字节跳动春招</a></li>
+            <li><a href="#">字节跳动春招</a></li>
+            <li><a href="#">字节跳动春招</a></li>
+            <li><a href="#">字节跳动春招</a></li>
+        </ul>
+    </div>
+</body>
+</html>

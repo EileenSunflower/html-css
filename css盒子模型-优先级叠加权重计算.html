@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 计算规则：（行内样式的个数，id选择器的个数，类选择器的个数，标签选择器的个数） */
+        /* !import优先级最高，用在继承上时不改变优先级 */
+        /* 继承优先级最低 */
+        /* 高优先级的个数最多，优先级最高，个数相同时往下比 */
+        /* (0，1，0，1) */
+        div #one{
+            color: red;
+        }
+        /* （0，0，2，0） */
+        .father .son{
+            color: blue;
+        }
+        /* （0，0，1，1） */
+        .father p{
+            color: gold;
+        }
+        /* （0，0，0，2） */
+        div p{
+            color: black;
+        }
+    </style>
+</head>
+<body>
+    <div class="father">
+        <p class="son" id="one">我是一个p标签</p>
+    </div>
+</body>
+</html>

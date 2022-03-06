@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* （行内，id，类，标签） */
+        /* 继承最低 */
+        /* (0,2,0,0) */
+        #father #son{
+            color: aqua;
+        }
+        /* (0,1,1,1) */
+        #father p.c2{
+            color: black;
+        }
+        /* （0，0，2，2） */
+        div.c1 p.c2{
+            color: red;
+        }
+        /* 继承，优先级最低 */
+        #father{
+            color: chartreuse;
+        }
+        /* 继承，优先级最低 */
+        div#father.c1{
+            color: brown;
+        }
+    </style>
+</head>
+<body>
+    <div class="c1" id="father">
+        <p class="c2" id="son">
+            我的颜色是什么
+        </p>
+    </div>
+</body>
+</html>
